@@ -1,4 +1,4 @@
-# e_api_websocket_receive_tel.py
+# e_api_websocket_receive_pubkey.py
 暫定版　WebSocketデータ受信　公開鍵認証
 
 ご注意！！ ================================
