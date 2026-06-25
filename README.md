@@ -84,7 +84,7 @@ APIの基本設計について
 	ファイル構成：
 	~/e_api/                        ← API実行基盤（権限: 700 / 所有者のみアクセス可）
 	├── .auth/                      ← 鍵・暗号化データ格納（権限: 700）
-	│   ├── file_pwd2.txt           ← 第2パスワード保存ファイル（手動作成）
+	│   ├── file_pwd2.txt           ← 第2パスワード保存ファイル（手動作成。注文・訂正・取消以外は不要）
 	│   └── file_login_response.txt ← ログイン応答出力先（自動生成）
 	├── file_url_info.txt           ← API接続情報ファイル（手動作成）
 	├── e_api_login_pubkey.py
