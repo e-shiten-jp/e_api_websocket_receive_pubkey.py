@@ -81,6 +81,20 @@ APIの基本設計について
 	e_api_login_pubkey.py を実行
 	で、仮想URL（１日券）を取得しておいてください。
 	
+	ファイル構成：
+	~/e_api/                        ← API実行基盤（権限: 700 / 所有者のみアクセス可）
+	├── .auth/                      ← 鍵・暗号化データ格納（権限: 700）
+	│   ├── file_pwd2.txt           ← 第2パスワード保存ファイル（手動作成）
+	│   └── file_login_response.txt ← ログイン応答出力先（自動生成）
+	├── file_url_info.txt           ← API接続情報ファイル（手動作成）
+	└── e_api_websocket_receive_pubkey.py
+	
+	~/e_api/file_url_info.txtの内容例：
+	{
+	    "sUrl": "https://demo-kabuka.e-shiten.jp/e_api_v4r9/",
+	    "sJsonOfmt": "5"
+	}
+	
 ５）実行内容は、以下になります。
 
 	  WebSocket I/F で、指定したプッシュ情報を受信します（約定、株価の変動等のプッシュ通知）。
